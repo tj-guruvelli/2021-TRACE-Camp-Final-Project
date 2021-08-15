@@ -4,6 +4,31 @@
 	box-sizing: border-box;
 }
 
+.App-particles__container {
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	z-index: -1;
+  }
+  .App-particles__container canvas {
+	transition: 0.2s all ease-in-out;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+	
+	
+  }
+
+
+
+#root {
+  height: inherit;
+}
+
+
 body {
 	font-family: 'montserrat', sans-serif;
 	background-color: #223343;
@@ -25,6 +50,33 @@ main {
 	width: 100%;
 	max-width: 960px;
 	margin: 0 auto;
+}
+
+.image-container {
+	position:absolute;
+	position: relative;
+	transition: transform 0.2s;
+}
+
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	transition: 0.5s ease;
+	opacity: 0;
+	bottom: 0;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
 }
 
 section {
@@ -71,6 +123,7 @@ section {
 
 .results .result img {
 	display: block;
+	position:relative;
 	width: 100%;
 }
 
