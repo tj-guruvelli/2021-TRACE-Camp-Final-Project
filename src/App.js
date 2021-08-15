@@ -75,7 +75,7 @@ function App() {
         params={{
           particles: {
             number: {
-              value: 100,
+              value: 150,
             },
             size: {
               value: 3,
@@ -89,7 +89,7 @@ function App() {
               },
               onclick: {
                 enable: true,
-                mode: "bubble",
+                mode: "bubble"
               },
 
             },
