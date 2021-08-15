@@ -1,215 +1,210 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .App-particles__container {
-	overflow: hidden;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	bottom: 0px;
-	right: 0px;
-	z-index: -1;
-  }
-  .App-particles__container canvas {
-	transition: 0.2s all ease-in-out;
-	z-index: -1;
-	height: 100%;
-	width: 100%;
-	
-	
-  }
-
-
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+}
+.App-particles__container canvas {
+  transition: 0.2s all ease-in-out;
+  z-index: -1;
+  height: auto;
+  width: auto;
+}
 
 #root {
   height: inherit;
 }
 
-
 body {
-	font-family: 'montserrat', sans-serif;
-	background-color: #223343;
+  font-family: "montserrat", sans-serif;
+  background: #1b1b1b;
 }
 
 header {
-	padding: 50px 15px 0px;
+  padding: 50px 15px 0px;
 }
 
 header h1 {
-	color: #FFF;
-	font-family: Copperplate, fantasy;
-	font-size: 75px;
-	font-weight: 500;
-	text-align: center;
+  color: #fff;
+  font-family: Copperplate, fantasy;
+  font-size: 75px;
+  font-weight: 500;
+  text-align: center;
 }
 
 main {
-	width: 100%;
-	max-width: 960px;
-	margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .image-container {
-	position:absolute;
-	position: relative;
-	transition: transform 0.2s;
+  position: absolute;
+  position: relative;
+  transition: transform 0.2s;
 }
 
 .image-container:hover {
-	cursor: pointer;
-	transform: scale(1.1);
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .image-container:hover .overlay {
-	opacity: 1;
+  opacity: 1;
 }
 
 .overlay {
-	position: absolute;
-	background: rgba(0, 0, 0, 0.8);
-	width: 100%;
-	transition: 0.5s ease;
-	opacity: 0;
-	bottom: 0;
-	font-size: 20px;
-	padding: 20px;
-	text-align: center;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  bottom: 0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
 }
 
 section {
-	padding: 15px;
+  padding: 15px;
 }
 
 .searchbox {
-	display: block;
-	width: 100%;
-	padding: 15px;
+  display: block;
+  width: 100%;
+  padding: 15px;
 
-	border: none;
-	outline: none;
-	background: none;
+  border: none;
+  outline: none;
+  background: none;
 
-	background-color: #EEE;
-	border-radius: 8px;
+  background-color: #eee;
+  border-radius: 8px;
 
-	color: #53565A;
-	font-size: 20px;
-	font-weight: 300;
+  color: #53565a;
+  font-size: 20px;
+  font-weight: 300;
 
-	transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
 }
 
 .searchbox:focus {
-	box-shadow: 3px 3px 11px 6px #53c444;
+  box-shadow: 3px 3px 11px 6px #4466c4;
 }
 
 .results {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0px -15px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px;
 }
 
 .results .result {
-	width: 33.333%;
-	min-width: 250px;
-	padding: 15px;
-	display: flex;
-	flex-direction: column;
-	cursor: pointer;
+  width: 33.333%;
+  min-width: 250px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
 }
 
 .results .result img {
-	display: block;
-	position:relative;
-	width: 100%;
+  display: block;
+  position: relative;
+  width: 100%;
 }
 
 .results .result h3 {
-	color: #FFF;
-	font-size: 20px;
-	font-weight: 600;
-	padding: 10px;
-	background: #44654c;
-	flex: 1 1 100%;
-	transition: 0.4s ease-out;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  background: #44654c;
+  flex: 1 1 100%;
+  transition: 0.4s ease-out;
 }
 
 .results .result:hover h3 {
-	background: #FFF;
-	color: #223343;
+  background: #fff;
+  color: #223343;
 }
 
 .popup {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
 
-	overflow-y: scroll;
+  overflow-y: scroll;
 }
 
 .popup .content {
-	display: block;
-	width: 100%;
-	max-width: 960px;
-	margin: 0 auto;
-	padding: 25px;
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 25px;
 
-	color: #FFF;
+  color: #fff;
 }
 
 .popup .content h2 {
-	font-size: 28px;
-	font-weight: 600;
+  font-size: 28px;
+  font-weight: 600;
 }
 .popup .content h2 span {
-	font-weight: 300;
-	font-size: 20px;
+  font-weight: 300;
+  font-size: 20px;
 }
 
 .popup .content .rating {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .popup .content .plot {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0px -15px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px 30px;
 }
 
 .popup .content .plot img {
-	flex: 1 1 50%;
-	max-width: 300px;
-	padding: 0px 15px;
+  flex: 1 1 50%;
+  max-width: 300px;
+  padding: 0px 15px;
 }
 
 .popup .content .plot p {
-	flex: 1 1 50%;
-	padding: 15px;
+  flex: 1 1 50%;
+  padding: 15px;
 }
 
 .popup .content .close {
-	display: inline-block;
-	padding: 15px 30px;
-	font-size: 18px;
-	font-weight: 700;
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 700;
 
-	background: #4484C4;
-	color: #FFF;
-	border-radius: 8px;
-	border: none;
-	outline: none;
-	appearance: none;
-	cursor: pointer;
+  background: #4484c4;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
 
-	transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
 }
 
 .popup .content .close:hover {
-	background: #223343;
+  background: #223343;
 }
